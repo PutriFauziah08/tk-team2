@@ -153,7 +153,8 @@
             <h1>Informasi ketinggian Air</h1>
             <canvas id="myChart"></canvas>
         </div>
-        <div>
+        <div style="padding-top:10%">
+            <h1>Informasi Letak daerah banjir</h1>
             <div id="map" style="height: 360px">map</div>
         </div>
     </div>
