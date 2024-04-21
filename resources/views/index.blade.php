@@ -12,6 +12,15 @@
     <link rel="stylesheet" href={{ asset('assets/css/bootstrap.css') }}>
     <link rel="stylesheet" href={{ asset('assets/js/script.js') }}>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+
 </head>
 
 <body>
@@ -136,6 +145,17 @@
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <div style="padding: 10%">
+        <div>
+            <h1>Informasi ketinggian Air</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div>
+            <div id="map" style="height: 360px">map</div>
+        </div>
     </div>
 
     <div class="footer">
@@ -171,6 +191,59 @@
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Kota 1', 'Kota 2', 'Kota 3', 'Kota 4', 'Kota 5', 'Kota 6', 'Kota 7'],
+                datasets: [{
+                    label: 'Ketinggian Air',
+                    data: [12, 19, 3, 5, 2, 3, 1],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+<script>
+    var greenIcon = L.icon({
+    iconUrl: 'download.png',
+    // shadowUrl: 'download.png',
+
+    iconSize:     [38, 50], // size of the icon
+    // shadowSize:   [50, 64], // size of the shadow
+    // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+L.marker([51.508, -0.09], {icon: greenIcon}).addTo(map);
+L.marker([51.508, -0.098], {icon: greenIcon}).addTo(map);
+L.marker([51.50811, -0.0918], {icon: greenIcon}).addTo(map);
+L.marker([51.50821, -0.0928], {icon: greenIcon}).addTo(map);
+L.marker([51.50881, -0.0988], {icon: greenIcon}).addTo(map);
+
+</script>
+
 </body>
 
 </html>
