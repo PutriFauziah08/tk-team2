@@ -46,7 +46,7 @@
         <div class="container">
             <div class="col-md-6 col-sm-6">
                 <div class="image">
-                    <img src="images/image1.png" class="img-responsive">
+                    <img src="{{asset('assets/images/image1.png')}}" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-2 col-sm-2">
                         <div class="grid-item" style="float: right;">
-                            <a href="#"><img src="icons/arrow_right.png" class="grid-btn"></a>
+                            <a href="#"><img src="{{asset('assets/icons/arrow_right.png')}}" class="grid-btn"></a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-md-2 col-sm-2">
                         <div class="grid-item" style="float: right;">
-                            <a href="#"><img src="icons/arrow_right.png" class="grid-btn"></a>
+                            <a href="#"><img src="{{asset('assets/icons/arrow_right.png')}}" class="grid-btn"></a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-md-2 col-sm-2">
                         <div class="grid-item" style="float: right;">
-                            <a href="#"><img src="icons/arrow_right.png" class="grid-btn"></a>
+                            <a href="#"><img src="{{asset('assets/icons/arrow_right.png')}}" class="grid-btn"></a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
         <div class="container">
             <div class="col-md-4 col-sm-4">
                 <div class="item">
-                    <img src="images/img_flood.png" class="info-img">
+                    <img src="{{asset('assets/images/img_flood.png')}}" class="info-img">
                     <h4>Info Banjir</h4>
                     <a href="#">
                         <h6>Baca Selengkapnya...</h6>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="item">
-                    <img src="images/img_call.png" class="info-img">
+                    <img src="{{asset('assets/images/img_call.png')}}" class="info-img">
                     <h4>Panggilan Darurat</h4>
                     <a href="#">
                         <h6>Baca Selengkapnya...</h6>
@@ -137,7 +137,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="item">
-                    <img src="images/img_rain.png" class="info-img">
+                    <img src="{{asset('assets/images/img_rain.png')}}" class="info-img">
                     <h4>Perkiraan Cuaca</h4>
                     <a href="#">
                         <h6>Baca Selengkapnya...</h6>
@@ -165,15 +165,15 @@
         </div>
         <div class="container">
             <div class="grid-item">
-                <a href="#"><img src="icons/youtube.png" class="footer-btn"></a>
+                <a href="#"><img src="{{asset('assets/icons/youtube.png')}}" class="footer-btn"></a>
 
-                <a href="#"><img src="icons/tiktok.png" class="footer-btn"></a>
+                <a href="#"><img src="{{asset('assets/icons/tiktok.png')}}" class="footer-btn"></a>
 
-                <a href="#"><img src="icons/facebook.png" class="footer-btn"></a>
+                <a href="#"><img src="{{asset('assets/icons/facebook.png')}}" class="footer-btn"></a>
 
-                <a href="#"><img src="icons/twitter.png" class="footer-btn"></a>
+                <a href="#"><img src="{{asset('assets/icons/twitter.png')}}" class="footer-btn"></a>
 
-                <a href="#"><img src="icons/instagram.png" class="footer-btn"></a>
+                <a href="#"><img src="{{asset('assets/icons/instagram.png')}}" class="footer-btn"></a>
 
 
             </div>
